@@ -1,8 +1,7 @@
 <?php
 
+use App\HelloWorld;
 use PHPUnit\Framework\TestCase;
-
-require __DIR__ . "/../src/HelloWorld.php";
 
 class HelloWorldTest extends TestCase
 {
