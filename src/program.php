@@ -22,5 +22,4 @@ echo "Deleting task with id[1]";
 
 $project->deleteTask(1);
 
-echo 'project has ' . count($project->tasks) . ' tasks, created project ?
-expect to see 2' . "\r \n";
+echo 'project has ' . count($project->tasks) . ' tasks, expected to see 2' . "\r\n";
