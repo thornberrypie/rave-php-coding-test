@@ -1,5 +1,5 @@
-# Rave Build Coding Test Environment
-Welcome to the Rave Build Coding Test environment! This repository should contains everything you need for our coding interview.
+# Rave Build PHP Coding Test
+Welcome to the Rave Build PHP Coding Test! This repository should contains everything you need for our coding interview.
 
 ## Installation
 1. Clone this Git repository
@@ -8,8 +8,8 @@ Welcome to the Rave Build Coding Test environment! This repository should contai
 4. Check that Docker is working by running `docker run hello-world`.
 5. Run `make up`. This starts a PHP web server in the background with the working directory mounted to it.
 
-## Running Tests
+## Running the tests
 Run `make test` to run the tests inside the running Docker container.
 
-## Running the App
+## Running the program
 Run `make run` to run the app inside the running Docker container.
