@@ -4,5 +4,8 @@
     },
     "autoload": {
         "psr-4": {"App\\": "src/"}
+    },
+    "require": {
+        "illuminate/collections": "^10.13"
     }
 }
