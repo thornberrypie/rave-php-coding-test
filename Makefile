@@ -1,16 +1,16 @@
-cli:
+cli: up
 	@docker compose exec -it web bash
 
 down:
 	@docker compose down
 
-logs:
+logs: up
 	@docker compose logs
 
-run:
+run: up
 	@docker compose exec web php ./src/program.php
 
-test:
+test: up
 	@docker compose exec web ./vendor/bin/phpunit tests
 
 up:
