@@ -1,17 +1,16 @@
-cli: up
-	@docker compose exec -it web bash
+RUN_PHP = @docker compose run --rm php
 
-down:
-	@docker compose down
+cli:
+	@docker compose run --interactive --tty --rm php bash
 
-logs: up
+logs:
 	@docker compose logs
 
-run: up
-	@docker compose exec web php ./src/program.php
+run: composer-install
+	$(RUN_PHP) php ./src/program.php
 
-test: up
-	@docker compose exec web ./vendor/bin/phpunit tests
+test: composer-install
+	$(RUN_PHP) ./vendor/bin/phpunit tests
 
-up:
-	@docker compose up --detach
+composer-install:
+	$(RUN_PHP) composer install --quiet
