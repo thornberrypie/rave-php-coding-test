@@ -3,7 +3,7 @@
 use App\Project;
 use PHPUnit\Framework\TestCase;
 
-class ProjectTests extends TestCase
+class ProjectTest extends TestCase
 {
     public function test_project_name_is_set(): void
     {
