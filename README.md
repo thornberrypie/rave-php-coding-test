@@ -6,10 +6,12 @@ common functionality at Rave. We expect to spend **30 minutes to 1 hour** on thi
 Your objectives are:
 
 1. Get the tests passing
-2. Make the code "production ready" (whatever that means to you)
+2. Make the rest of the code as good as you can make it (whatever that means to you)
 3. Note down any choices or assumptions you made and why in this README
 4. Note down what you would do if you had more time in this README
 5. Send us this repository (or a link to your fork)!
+
+**Feel free to edit any files in this repository** as part of this exercise.
 
 ## Installation
 PHP installations are quite complicated, so we have Dockerised the 
@@ -34,9 +36,10 @@ Run `make test` to run the PHPUnit tests in a Docker container.
 Run `make run` to execute `program.php`. It is not required, but we have provided 
 it if you would like to just run PHP code to debug things.
 
-## Choices or assumptions I made and reasons why
+## My notes
+### Choices or assumptions I made and reasons why
 * E.g. I assumed that task names were unique
 
-## Things I would do if I had more time
+### Things I would do if I had more time
 * E.g. I would have rewritten it to use Rust because it's super fast and 
 that's what Khan Academy did!
