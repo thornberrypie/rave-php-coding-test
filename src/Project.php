@@ -29,6 +29,6 @@ class Project
 
     public function deleteTask($id)
     {
-        // not yet implemented
+        $this->tasks->forget($id);
     }
 }
