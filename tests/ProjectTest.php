@@ -14,9 +14,9 @@ class ProjectTest extends TestCase
         $this->assertEquals($name, $project->name);
 
         // Add some tasks and check that we have the right amount
-        $project->addTask(0, 'Book pre-wrap inspection');
-        $project->addTask(1, 'Garage door install');
-        $project->addTask(2, 'Appliance Delivery');
+        $project->addTask('Book pre-wrap inspection');
+        $project->addTask('Garage door install');
+        $project->addTask('Appliance Delivery');
         $this->assertCount(3, $project->tasks);
 
         // Test the findTask method

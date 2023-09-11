@@ -15,9 +15,9 @@ class Project
         $this->tasks = new Collection();
     }
 
-    public function addTask($id, $name){
+    public function addTask($name){
         $task = new Task;
-        $task->id = $id;
+        $task->id = $this->tasks->count(); // Auto-increment the id
         $task->name = $name;
         $this->tasks->push($task);
     }
