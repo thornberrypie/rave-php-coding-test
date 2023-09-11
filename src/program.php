@@ -11,4 +11,4 @@ use App\Project;
 $project = new Project('Test Project');
 $project->addTask(0, 'Book pre-wrap inspection');
 
-print_r($project);
+echo '<pre>' . var_export($project, true) . '</pre>';
