@@ -19,7 +19,7 @@ class Project
         $task = new Task;
         $task->id = $id;
         $task->name = $name;
-        $this->tasks->push($id, $task);
+        $this->tasks->push($task);
     }
 
     public function findTask($id): Task
