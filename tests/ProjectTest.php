@@ -5,44 +5,26 @@ use PHPUnit\Framework\TestCase;
 
 class ProjectTest extends TestCase
 {
-    public function test_project_name_is_set(): void
+    public function test_tasks(): void
     {
         $name = 'Test project';
         $project = new Project($name);
 
+        // Test that the project name is set
         $this->assertEquals($name, $project->name);
-    }
 
-    public function test_adding_tasks_increases_task_count(): void
-    {
-        $project = new Project('Test project');
-
+        // Add some tasks and check that we have the right amount
         $project->addTask(0, 'Book pre-wrap inspection');
         $project->addTask(1, 'Garage door install');
         $project->addTask(2, 'Appliance Delivery');
-
         $this->assertCount(3, $project->tasks);
-    }
 
-    public function test_get_task_by_id(): void
-    {
-        $project = new Project('Test project');
-        $project->addTask(0, 'Book pre-wrap inspection');
-        $project->addTask(1, 'Garage door install');
-
+        // Test the findTask method
         $task = $project->findTask(1);
-
         $this->assertEquals('Garage door install', $task->name);
-    }
 
-    public function test_delete_task_by_id(): void
-    {
-        $project = new Project('Test project');
-        $project->addTask(0, 'Book pre-wrap inspection');
-        $project->addTask(1, 'Garage door install');
-
+        // Test the deleteTask method
         $project->deleteTask(1);
-
-        $this->assertCount(1, $project->tasks);
+        $this->assertCount(2, $project->tasks);
     }
 }
