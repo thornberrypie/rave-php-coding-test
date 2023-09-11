@@ -30,9 +30,9 @@ class ProjectTest extends TestCase
         $project->addTask(0, 'Book pre-wrap inspection');
         $project->addTask(1, 'Garage door install');
 
-        $task = $project->getTask(1);
+        $task = $project->findTask(1);
 
-        $this->assertEquals('Garage door install', $task);
+        $this->assertEquals('Garage door install', $task->name);
     }
 
     public function test_delete_task_by_id(): void
